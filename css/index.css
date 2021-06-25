@@ -20,7 +20,7 @@
 
 *{
   font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
-  /*user-select: none;*/
+  user-select: none;
 }
 
 
@@ -49,9 +49,13 @@ header{
   backdrop-filter: blur(5px);
   background-color:#1c1c1c0F;
   box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
-  border: 1px rgba(255,255,255,0.4) solid;
-  border-bottom: 1px rgba(40,40,40,0.35) solid;
-  border-right: 1px rgba(40,40,40,0.35) solid;
+  border-bottom: 2px rgba(40,40,40,0.35) solid;
+  transition: all 0.4s ease;
+}
+.header.active{
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.4s ease;
 }
 #Navigator{
   display: flex;
@@ -138,15 +142,17 @@ header{
   margin-top: 5vh;
   padding: 1vh;
   display: flex;
-  background: linear-gradient(145deg, #0d0d0d, #0b0b0b);
+  background: linear-gradient(145deg, #050505, #000000);
   box-shadow:  10px 10px 10px #0e0e0e,-10px -10px 10px #2a2a2a;
+  border: 1px rgba(255,255,255,0.4) solid;
+    border-bottom: 1px rgba(40,40,40,0.35) solid;
+    border-right: 1px rgba(40,40,40,0.35) solid;
 }
 
 
 
 #Work{
-  margin-top: 5vh;
-  padding: 1vh;
+  padding-top: 10vh;
 }
 .work-card{
   display: inline-block;
@@ -161,7 +167,7 @@ header{
   box-shadow:  5px 5px 10px #0e0e0e,-5px -5px 10px #2a2a2a;
   gap: 20px;
     border-radius: 2px;
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(5px);
     background-color:#1c1c1c0F;
     box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
     border: 1px rgba(255,255,255,0.4) solid;
@@ -222,8 +228,7 @@ header{
 
 
 #Who{
-  margin-top: 5vh;
-  padding-top: 5vh;
+  padding-top: 10vh;
 }
 
 
@@ -240,7 +245,7 @@ header{
   align-items: center;
   gap: 20px;
   border-radius: 0px;
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(5px);
   background-color:#1c1c1c0F;
   box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
   border: 1px rgba(255,255,255,0.4) solid;
@@ -267,9 +272,7 @@ footer{
   backdrop-filter: blur(1px);
   background-color:#0c0c0cCF;
   box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
-  border: 1px rgba(255,255,255,0.4) solid;
-  border-bottom: 1px rgba(40,40,40,0.35) solid;
-  border-right: 1px rgba(40,40,40,0.35) solid;
+  border-top: 2px rgba(255,255,255,0.4) solid;
   text-align:right
 }
 
@@ -289,7 +292,7 @@ footer{
   padding-left: 2.5%;
   }
   .work-card{
-  width: 21%;
+  width: 45%;
   height: fit-content;
   margin:0px 1.5%;
   margin-bottom: 5vh;
@@ -307,6 +310,9 @@ footer{
 /*SmartPhone*/
 @media screen and (max-width:767px){
   /*Body*/
+  #PageTop{
+    margin-top: 10vh;
+  }
   main,header{
     min-width: 280px;
   }
@@ -318,10 +324,11 @@ footer{
   header{
     position: fixed;
     width: 100%;
+    height: 58px;
     top: 0;
-    opacity: 0.99;
     box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.75);
-    z-index: 289;
+    z-index: 100;
+    transition: all 1.0s ease;
   }
   .HamburgerNavi{
     display:block;
@@ -336,7 +343,7 @@ footer{
   padding-left: 3%;
   }
   .work-card{
-  width: 45%;
+  width: 90%;
   margin:0px 2%;
   margin-bottom: 5vh;
   padding:0.5%;
@@ -351,6 +358,12 @@ footer{
   background-repeat: no-repeat;
   height: 24vw;
 }
+.swiper-slide:hover{
+  transform: scale(1.2);/* 拡大 */
+}
+.swiper-slide a{
+  text-decoration: none;
+}
 .swiper-slide .entity-img {
   display: none;
 }
@@ -359,8 +372,19 @@ footer{
   opacity: 0;
   transition: opacity 1.6s ease;
   color: #FCFAF2;
-  padding-top: 10vw;
-  padding-left: 2vw;
+  margin-top: 10vw;
+  margin-left: 2vw;
+
+  gap: 20px;
+  border-radius: 0px;
+  backdrop-filter: blur(2px);
+  background-color:#1c1c1c8F;
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  border: 1px rgba(255,255,255,0.4) solid;
+  border-bottom: 1px rgba(40,40,40,0.35) solid;
+  border-right: 1px rgba(40,40,40,0.35) solid;
+  padding-left:1vw ;
+  padding-bottom: 0.5vw;
 }
 .swiper-slide-active .content{
   opacity: 1;
@@ -456,7 +480,7 @@ footer{
   height: 50vw;
   }
   .swiper-slide .content .title {
-    padding-top: 10vw;
+    padding-top: 1vw;
     font-size: 8vw;
   }
   .swiper-container.swiper-container-coverflow {
@@ -483,7 +507,7 @@ footer{
   left: 25px;
   top: 25px;
   width: 24px;
-  z-index: 99;
+  z-index: 102;
 }
 .menu__line{
   background: #FCFAF2;
@@ -506,12 +530,11 @@ footer{
 }
 /*gnav*/
 .gnav{
-  background: #1c1c1c;
   display: none;
   height: 100vh;
   position: fixed;
   width: 100vw;
-  z-index: 98;
+  z-index: 101;
 }
 .gnav__wrap{
   display: flex;
@@ -523,8 +546,8 @@ footer{
 .gnav__menu__item{
   margin: 3rem 0;
 }
-.gnav__menu__item a{
-  color: #000;
+#Navigator .gnav__menu__item a{
+  color: #FCFAF2;
   font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: .1rem;
