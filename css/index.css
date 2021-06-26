@@ -211,18 +211,19 @@ header{
   border-radius: 5%;
   padding:1px 5px;
   font-size: 12px;
+  background-color:#005CAF;
 }
 #Work .project{
-  background-color: #005CAF;/*#1B813E;/*TOKIWA*/
+  background-color: /*#1B813E;/*TOKIWA*/
 }
 #Work .proposal{
-  background: #005CAF;/*#FFB11B/*;YAMABUKI*/
+  background: /*#FFB11B/*;YAMABUKI*/
 }
 #Work .programming{
-  background-color: #005CAF;/*RURI*/
+  background-color: /*#005CAF;/*RURI*/
 }
 #Work .art{
-  background-color: #005CAF;/*#E83015;/*SYOUJYOHI*/
+  background-color: /*#E83015;/*SYOUJYOHI*/
 }
 
 
@@ -372,7 +373,8 @@ footer{
   opacity: 0;
   transition: opacity 1.6s ease;
   color: #FCFAF2;
-  margin-top: 10vw;
+  margin-top: 12vw;
+  bottom: 0;
   margin-left: 2vw;
 
   gap: 20px;
@@ -387,6 +389,7 @@ footer{
   padding-bottom: 0.5vw;
 }
 .swiper-slide-active .content{
+  display: none;
   opacity: 1;
 }
 .swiper-slide .content .title {
